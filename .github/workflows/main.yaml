@@ -45,17 +45,17 @@ jobs:
                     [ ! -d "${HOME}/senpro/499769/modul02/senpro-github-action/" ] &&
                       {
                         echo "Repository belum di-clone. Cloning...";
-                        mkdir -p ~/senpro/499769/modul02;
-                        cd /senpro/499769/modul02;
+                        mkdir -p "~/senpro/499769/modul02";
+                        cd "~/senpro/499769/modul02";
                         git clone "https://github.com/iZcy/senpro-github-action";
-                        cd /senpro/499769/modul02/senpro-github-action;
+                        cd "~/senpro/499769/modul02/senpro-github-action";
                         echo "Install Package dan Build Project";
                         npm install;
                         npm run build;
                       } ||
                       {
                         echo "Repository sudah ada. Building...";
-                        cd /senpro/499769/modul02/senpro-github-action;
+                        cd "~/senpro/499769/modul02/senpro-github-action";
                         git restore .;
                         git pull origin main;
                         echo "Install Package dan Build Project";
